@@ -1,30 +1,26 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        int maior,menor,n;
+        maior =0;
+        menor =0;
+        Scanner in = new Scanner(System.in);
 
-
-        double n1, n2;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Digite um número:");
-
-        n1 = scanner.nextDouble();
-
-        System.out.println("Digite outro número");
-
-        n2 = scanner.nextDouble();
-
-
-        if (n1 > n2) {
-
-
-            System.out.println("O numero 1 (" + n1 + ") é maior que o número 2 (" + n2 + ").");
+        for (int i=0;i<5;i++){
+            System.out.println("Digite n"+(i+1)+":");
+            n = in.nextInt();
+            if (i==0){
+                maior=n;
+                menor=n;
+            }else {
+                if (n>maior)
+                    maior=n;
+                if (n<menor);
+                menor=n;
+            }
         }
-        else {
-
-            System.out.println("O numero 2 (" + n2 + ") é maior que o número 1 (" + n1 + ").");
-        }
-        scanner.close();
+        System.out.println("Maior = " + maior);
+        System.out.println("Menor = " + menor);
     }
 }
